@@ -1,0 +1,173 @@
+---
+title: "An introduction to Dashboards"
+author: "Keith Lewis"
+date: "4/14/2021"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## RStudio Tips
+
+## Before we get started
+- Could you click on File -> New -> R Markdown?
+- Do you have the abiotic data set?
+- Have you installed packages knitr, rmarkdown, and the tidyverse
+
+
+## What this workshop is about
+- Making interactive dashboards, i.e. putting your ggplotly objects into a single file
+
+- This workshop is not about:
+    - dynamic documents
+    - reproducible research
+    - all aspects of markdown and other similar languages
+    - we have a workshop on making Rmarkdown documents if its of interest
+
+## Review markdown
+- Markdow is a light weight, text-to-html language (not R)
+- R Markdown enables R code to be embedded in the markdown language
+- knitr and rmarkdown packages: “knits” R code with text; converts the R Markdown files into various formats (html, Word, pdf, PowerPoint)
+- Using this approach you can:
+    - make documents, presentations, or dashboards (posters)
+    - output as html, pdf, Word/PowerPoint, etc
+
+## Review ggplot2 and plotly
+- grammar of graphics
+    - data
+    - aesthetics
+    - geom
+
+## Objectives
+- Basic: dashboard basics, produce a simple dashboard
+- Intermediate: more complicated layouts; more pages
+- Advanced: tabsets, YAML
+
+## RMarkdown Basics
+<style> 
+  #slideID > p { 
+    margin-top: -100px; 
+  } 
+</style>
+<img src="figures/6_Rstudio_DD.png" width="95%" />
+
+## RMarkdown Basics
+<style> 
+  #slideID > p { 
+    margin-top: -100px; 
+  } 
+</style>
+<img src="figures/6_Rstudio_Dashboard.png" width="95%" />
+
+## RMarkdown basics:  the layout and the header
+- columns or rows
+- the header -> names the columns or rows
+
+## RMarkdown basics:  the "chunk"
+- The "r chunk"
+- Start a r chunk: type ```{r}
+- Type some R code
+- End a r chunk: type ```
+- For dashboards, 
+    - the "text chunk" is optional
+    - text chunk goes in between the header and r chunks
+
+
+## RMarkdown Basics: the "r chunk"
+<style> 
+  #slideID > p { 
+    margin-top: -100px; 
+  } 
+</style>
+<img src="figures/6_Rstudio_Dashboard_chunks.png" width="95%" />
+
+
+## Rmarkdown basics: the setup chunk
+- A chunk that doesn't produce anything but useful for:
+    - loading packages (e.g. library (ggplot2))
+    - reading in your data 
+- hint: recycle your code
+
+## Basic Exercise
+Now it's your turn (hint: recycle your code!!!!):    
+
+- begin an R markdown file (File -> New -> R Markdown)
+- Choose "From template", make sure "Flexdashboard" is selected, hit OK
+- read in the abiotic data file
+- copy some ggplotly code into the r chunks
+- save the file and "knit" it -> choose "Knit to html"
+- open in browser
+- check to see the figures appear where you want them to and are interactive
+
+## Intermediate RMarkdown 
+- Add pages
+- more complicated layouts
+
+## RMarkdown basics: The dashboard layout
+Hashtags - they're not just for Twitter
+<style> 
+  #slideID > p { 
+    margin-top: -100px; 
+  } 
+</style>
+<img src="figures/6_Rstudio_DD.png" width="95%" />
+
+
+https://rmarkdown.rstudio.com/flexdashboard/layouts.html
+
+
+## RMarkdown intermediate exercises
+Copy the first exercise to a new file (save it) and produce the following document
+
+## Advanced RMarkdown
+
+
+## Advanced exercises
+- Copy the second exercise to a new file (save it) and produce the following document
+- Hint: the summary is the mean and SD of depth by NAFO division - use the tidyverse
+
+
+- .....then update it  to 2010 :)
+  
+## Next steps in RMarkdown {.smaller}
+ - YAML headers
+ - hooks
+ - inserting graphics
+ - Presentations (ioslides and RPres)
+ - Posters (dashboard)
+ - Adding bibliographies
+ - templates
+ - insert equations
+ - Notebooks
+ - packrat (so package updates don't mess things up)
+ - Plotly
+ - Ctrl-Shift-k
+ - package editR
+
+## Help {.smaller}
+Books  
+Xie, Y. 2013. Dynamic Documents with R and knitr. CRC Press, London.
+Gandrud, C. 2014. Reproducible Research with R and RStudio. 2nd Edition. CRC Press, Boca Raton, FL. 
+
+Cheatsheets  
+http://ropensci.github.io/reproducibility-guide/sections/introduction/
+https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf
+
+Reproducible Research webpages  
+http://ropensci.github.io/reproducibility-guide/sections/introduction/
+
+Knitr or Markdown webpages  
+https://yihui.name/knitr/
+https://support.rstudio.com/hc/en-us/articles/205368677-R-Markdown-Dynamic-Documents-for-R
+https://sachsmc.github.io/knit-git-markr-guide/knitr/knit.html
+http://kbroman.org/knitr_knutshell/pages/Rmarkdown.html
+
+YAML  
+http://rmarkdown.rstudio.com/html_document_format.html
+http://rmarkdown.rstudio.com/pdf_document_format.html
+http://rmarkdown.rstudio.com/word_document_format.html
+
+
+
