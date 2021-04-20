@@ -24,10 +24,10 @@ knitr::opts_chunk$set(echo = FALSE)
     - dynamic documents
     - reproducible research
     - all aspects of markdown and other similar languages
-    - we have a workshop on making Rmarkdown documents if its of interest
+- A workshop on making Rmarkdown documents is available 
 
 ## Review markdown
-- Markdow is a light weight, text-to-html language (not R)
+- Markdown is a light weight, text-to-html language (not R)
 - R Markdown enables R code to be embedded in the markdown language
 - knitr and rmarkdown packages: “knits” R code with text; converts the R Markdown files into various formats (html, Word, pdf, PowerPoint)
 - Using this approach you can:
@@ -42,8 +42,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Objectives
 - Basic: dashboard basics, produce a simple dashboard
-- Intermediate: more complicated layouts; more pages
-- Advanced: tabsets, YAML
+- Intermediate: create more complicated layouts; add pages; tabsets
+- Advanced: ??????
 
 ## RMarkdown Basics
 <style> 
@@ -53,7 +53,13 @@ knitr::opts_chunk$set(echo = FALSE)
 </style>
 <img src="figures/6_Rstudio_DD.png" width="95%" />
 
-## RMarkdown Basics
+
+## RMarkdown basics:  the layout and the header
+- decide on a layout: columns or rows
+- the header -> name the columns or rows
+
+
+## RMarkdown Basics: the layout and the header
 <style> 
   #slideID > p { 
     margin-top: -100px; 
@@ -61,9 +67,6 @@ knitr::opts_chunk$set(echo = FALSE)
 </style>
 <img src="figures/6_Rstudio_Dashboard.png" width="95%" />
 
-## RMarkdown basics:  the layout and the header
-- columns or rows
-- the header -> names the columns or rows
 
 ## RMarkdown basics:  the "chunk"
 - The "r chunk"
@@ -85,19 +88,31 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 ## Rmarkdown basics: the setup chunk
-- A chunk that doesn't produce anything but useful for:
+- A chunk that doesn't produce any output but useful for:
     - loading packages (e.g. library (ggplot2))
     - reading in your data 
+- Note: the "{r setup}" - you can name your chunks
 - hint: recycle your code
+
+## Rmarkdown basics: the setup chunk
+<style> 
+  #slideID > p { 
+    margin-top: -100px; 
+  } 
+</style>
+<img src="figures/6_Rstudio_Dashboard.png" width="95%" />
+
 
 ## Basic Exercise
 Now it's your turn (hint: recycle your code!!!!):    
 
 - begin an R markdown file (File -> New -> R Markdown)
 - Choose "From template", make sure "Flexdashboard" is selected, hit OK
-- read in the abiotic data file
-- copy some ggplotly code into the r chunks
-- save the file and "knit" it -> choose "Knit to html"
+- File -> Save As -> name the file
+- load the packages (setup chunk)
+- read in the abiotic data file (setup chunk)
+- copy corresponding ggplotly code into the r chunks
+- "knit" the file -> choose "Knit to html"
 - open in browser
 - check to see the figures appear where you want them to and are interactive
 
@@ -105,24 +120,36 @@ Now it's your turn (hint: recycle your code!!!!):
 - Add pages
 - more complicated layouts
 
-## RMarkdown basics: The dashboard layout
+## RMarkdown intermediate: The dashboard layout
 Hashtags - they're not just for Twitter
 <style> 
   #slideID > p { 
     margin-top: -100px; 
   } 
 </style>
-<img src="figures/6_Rstudio_DD.png" width="95%" />
+<img src="figures/6_Rstudio_Dashboard.png" width="95%" />
 
 
+## RMarkdown Intermediate: pages
+- In a markdown document, hashtags create headers
+- In a dashboard, hashtags create
+    - pages (#)
+    - slots on the page (###)
 https://rmarkdown.rstudio.com/flexdashboard/layouts.html
 
+## RMarkdown Intermediate: tabsets
+SHOW TABSETS
 
 ## RMarkdown intermediate exercises
+DO ALL THE ABOVE
+Page
+Tabset
+Change layout
+
 Copy the first exercise to a new file (save it) and produce the following document
 
 ## Advanced RMarkdown
-
+NOT SURE WHAT i WANT TO DO HERE
 
 ## Advanced exercises
 - Copy the second exercise to a new file (save it) and produce the following document
@@ -136,7 +163,6 @@ Copy the first exercise to a new file (save it) and produce the following docume
  - hooks
  - inserting graphics
  - Presentations (ioslides and RPres)
- - Posters (dashboard)
  - Adding bibliographies
  - templates
  - insert equations
