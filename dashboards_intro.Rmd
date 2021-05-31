@@ -1,30 +1,56 @@
 ---
 title: "An introduction to Dashboards"
 author: "Keith Lewis"
-date: "4/14/2021"
-output: ioslides_presentation
+date: "NAFC | Fisheries and Oceans Canada | October 12, 2017"
+output:
+  ioslides_presentation:
+    incremental: yes
+    widescreen: yes
+  beamer_presentation:
+    incremental: yes
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+```{r setup, echo=FALSE, results="hide", message=FALSE, warning=FALSE}
+library(readr)
+library(ggplot2)
+library(plotly)
+library(knitr)
+
+#knitr::opts_knit$set(root.dir = '../')
+knitr::opts_chunk$set(cache = TRUE, 
+                      fig.align = "center", 
+                      fig.height = 4.5, 
+                      fig.width = 7.5,
+                      dev = "svg")
+abiotic <- read_csv("data/trawl_abiotic.csv", col_types = cols(
+  year = "i",
+  nafo_div = "f",
+  strata = "f"))
+
+#get some cod data
+herr <- read_csv("data/herringSamps_abrev.csv")
+
 ```
+
 
 ## RStudio Tips
 
 ## Before we get started
+- Have you installed packages knitr, rmarkdown, flexdashboard, and all previous ones?
 - Could you click on File -> New -> R Markdown?
-- Do you have the abiotic data set?
-- Have you installed packages knitr, rmarkdown, and the tidyverse
-
+- Did you create a new RStudio project and associated folder?
+- Do you have the abiotic data set in this folder?
+- Do we need to talk about readr?
 
 ## What this workshop is about
-- Making interactive dashboards, i.e. putting your ggplotly objects into a single file
+- Making interactive dashboards, i.e. putting your ggplotly objects into a dashboard, i.e. a single file interactive html file
 
 - This workshop is not about:
     - dynamic documents
     - reproducible research
     - all aspects of markdown and other similar languages
-- A workshop on making Rmarkdown documents is available 
+- A workshop on making Rmarkdown documents is available if interested
+
 
 ## Review markdown
 - Markdown is a light weight, text-to-html language (not R)
@@ -39,24 +65,20 @@ knitr::opts_chunk$set(echo = FALSE)
     - data
     - aesthetics
     - geom
+- plotly
 
 ## Objectives
-- Basic: dashboard basics, produce a simple dashboard
+- Basic: produce a simple dashboard
 - Intermediate: create more complicated layouts; add pages; tabsets
 - Advanced: ??????
 
-## RMarkdown Basics
+## RMarkdown Basics {.smaller}
 <style> 
   #slideID > p { 
     margin-top: -100px; 
   } 
 </style>
 <img src="figures/6_Rstudio_DD.png" width="95%" />
-
-
-## RMarkdown basics:  the layout and the header
-- decide on a layout: columns or rows
-- the header -> name the columns or rows
 
 
 ## RMarkdown Basics: the layout and the header
@@ -70,9 +92,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## RMarkdown basics:  the "chunk"
 - The "r chunk"
-- Start a r chunk: type ```{r}
-- Type some R code
-- End a r chunk: type ```
+    - Start a r chunk: type ```{r}
+    - Type some R code
+    - End a r chunk: type ```
 - For dashboards, 
     - the "text chunk" is optional
     - text chunk goes in between the header and r chunks
@@ -90,9 +112,9 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Rmarkdown basics: the setup chunk
 - A chunk that doesn't produce any output but useful for:
     - loading packages (e.g. library (ggplot2))
-    - reading in your data 
-- Note: the "{r setup}" - you can name your chunks
-- hint: recycle your code
+    - reading/manipulating data 
+- Note: the "{r setup}" - you can name your chunks but this is optional
+
 
 ## Rmarkdown basics: the setup chunk
 <style> 
@@ -109,9 +131,10 @@ Now it's your turn (hint: recycle your code!!!!):
 - begin an R markdown file (File -> New -> R Markdown)
 - Choose "From template", make sure "Flexdashboard" is selected, hit OK
 - File -> Save As -> name the file
-- load the packages (setup chunk)
-- read in the abiotic data file (setup chunk)
-- copy corresponding ggplotly code into the r chunks
+- Setup chunk
+    - load the packages readr, knitr, and rmarkdown
+    - read in the abiotic data file
+- copy the code for two ggplotly objects into the r chunks
 - "knit" the file -> choose "Knit to html"
 - open in browser
 - check to see the figures appear where you want them to and are interactive
