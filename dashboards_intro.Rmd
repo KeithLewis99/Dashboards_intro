@@ -33,14 +33,12 @@ herr <- read_csv("data/herringSamps_abrev.csv")
 ```
 
 
-## RStudio Tips
-
 ## Before we get started
 - Have you installed packages knitr, rmarkdown, flexdashboard, and all previous ones?
 - Could you click on File -> New -> R Markdown?
 - Did you create a new RStudio project and associated folder?
-- Do you have the abiotic data set in this folder?
-- Do we need to talk about readr?
+- Do you have the abiotic data set in this folder (or data folder)?
+- Anything we need to review (R, RStudio, readr)???
 
 ## What this workshop is about
 - Making interactive dashboards, i.e. putting your ggplotly objects into a dashboard, i.e. a single file interactive html file
@@ -68,8 +66,10 @@ herr <- read_csv("data/herringSamps_abrev.csv")
 - plotly
 
 ## Objectives
-- Basic: produce a simple dashboard
-- Intermediate: create more complicated layouts; add pages; tabsets
+- Basic: produce a simple dashboard with interactive graphs
+- Intermediate: basic + create more complicated layouts
+    - add pages
+    - tabsets
 - Advanced: ??????
 
 ## RMarkdown Basics {.smaller}
@@ -78,16 +78,13 @@ herr <- read_csv("data/herringSamps_abrev.csv")
     margin-top: -100px; 
   } 
 </style>
-<img src="figures/6_Rstudio_DD.png" width="95%" />
+<img src="figures/6_Rstudio_Dashboard_labels.png" width="95%" />
 
 
-## RMarkdown Basics: the layout and the header
-<style> 
-  #slideID > p { 
-    margin-top: -100px; 
-  } 
-</style>
-<img src="figures/6_Rstudio_Dashboard.png" width="95%" />
+## RMarkdown Basics: the YAML and the layout 
+
+
+## RMarkdown Basics: columns and headers
 
 
 ## RMarkdown basics:  the "chunk"
@@ -157,7 +154,7 @@ Hashtags - they're not just for Twitter
 - In a markdown document, hashtags create headers
 - In a dashboard, hashtags create
     - pages (#)
-    - slots on the page (###)
+    - headers on the page (###)
 https://rmarkdown.rstudio.com/flexdashboard/layouts.html
 
 ## RMarkdown Intermediate: tabsets
