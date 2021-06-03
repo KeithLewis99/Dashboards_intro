@@ -63,7 +63,7 @@ herr <- read_csv("data/herringSamps_abrev.csv")
     - data
     - aesthetics
     - geom
-- plotly
+- plotly - interactive plots
 
 ## Objectives
 - Basic: produce a simple dashboard with interactive graphs
@@ -71,6 +71,33 @@ herr <- read_csv("data/herringSamps_abrev.csv")
     - add pages
     - tabsets
 - Advanced: ??????
+
+
+- Questions before we start??
+
+## RMarkdown Basics {.smaller}
+Begin an R markdown file (File -> New -> R Markdown)
+<style> 
+  #slideID > p { 
+    margin-top: -100px; 
+  } 
+</style>
+<img src="figures/6_Rstudio_Dashboard_labels.png" width="95%" />
+
+
+## RMarkdown Basics: the YAML and the layout 
+- YAML = Yet Another Markdown Language
+- RStudio creates this automatically
+- Can be tweaked to provide a lot of control over the output (not covered)
+- RStudio has a standard layout that can be modified 
+
+
+## RMarkdown Basics: columns and headers
+- Columns are created with "Column" and "---------"
+- Can organize layout by rows (not covered)
+- Can specify column width {data = width = 650}
+- Headers are specified with "###" and a "title"
+
 
 ## RMarkdown Basics {.smaller}
 <style> 
@@ -81,13 +108,7 @@ herr <- read_csv("data/herringSamps_abrev.csv")
 <img src="figures/6_Rstudio_Dashboard_labels.png" width="95%" />
 
 
-## RMarkdown Basics: the YAML and the layout 
-
-
-## RMarkdown Basics: columns and headers
-
-
-## RMarkdown basics:  the "chunk"
+## RMarkdown basics: the "chunk"
 - The "r chunk"
     - Start a r chunk: type ```{r}
     - Type some R code
@@ -97,7 +118,7 @@ herr <- read_csv("data/herringSamps_abrev.csv")
     - text chunk goes in between the header and r chunks
 
 
-## RMarkdown Basics: the "r chunk"
+## RMarkdown Basics: the "r chunk with code"
 <style> 
   #slideID > p { 
     margin-top: -100px; 
@@ -121,17 +142,21 @@ herr <- read_csv("data/herringSamps_abrev.csv")
 </style>
 <img src="figures/6_Rstudio_Dashboard.png" width="95%" />
 
+## Rmarkdown basics: the Knit button
+- click on "Knit" button to run code and specify output
 
-## Basic Exercise
-Now it's your turn (hint: recycle your code!!!!):    
-
+## Basic Exercise I
 - begin an R markdown file (File -> New -> R Markdown)
 - Choose "From template", make sure "Flexdashboard" is selected, hit OK
 - File -> Save As -> name the file
+- "knit" the file -> choose "Knit to html"
+
+## Basic Exercise II
+- Now it's your turn (hint: recycle your code!!!!)
 - Setup chunk
     - load the packages readr, knitr, and rmarkdown
     - read in the abiotic data file
-- copy the code for two ggplotly objects into the r chunks
+- copy the code for three ggplotly objects into the r chunks
 - "knit" the file -> choose "Knit to html"
 - open in browser
 - check to see the figures appear where you want them to and are interactive
@@ -139,6 +164,15 @@ Now it's your turn (hint: recycle your code!!!!):
 ## Intermediate RMarkdown 
 - Add pages
 - more complicated layouts
+
+## RMarkdown Intermediate: pages
+- In a markdown document, hashtags create headers (more hashtags = smaller header)
+- In a dashboard, hashtags create:
+    - pages (#)
+    - headers on the page (###)
+- See
+https://rmarkdown.rstudio.com/flexdashboard/layouts.html
+
 
 ## RMarkdown intermediate: The dashboard layout
 Hashtags - they're not just for Twitter
@@ -149,13 +183,6 @@ Hashtags - they're not just for Twitter
 </style>
 <img src="figures/6_Rstudio_Dashboard.png" width="95%" />
 
-
-## RMarkdown Intermediate: pages
-- In a markdown document, hashtags create headers
-- In a dashboard, hashtags create
-    - pages (#)
-    - headers on the page (###)
-https://rmarkdown.rstudio.com/flexdashboard/layouts.html
 
 ## RMarkdown Intermediate: tabsets
 SHOW TABSETS
@@ -169,7 +196,7 @@ Change layout
 Copy the first exercise to a new file (save it) and produce the following document
 
 ## Advanced RMarkdown
-NOT SURE WHAT i WANT TO DO HERE
+Drop downs????
 
 ## Advanced exercises
 - Copy the second exercise to a new file (save it) and produce the following document
