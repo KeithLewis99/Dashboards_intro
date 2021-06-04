@@ -1,5 +1,5 @@
 ---
-title: "An introduction to Dashboards"
+title: "A Brief Introduction to Dashboards"
 author: "Keith Lewis"
 date: "NAFC | Fisheries and Oceans Canada | October 12, 2017"
 output:
@@ -35,9 +35,10 @@ herr <- read_csv("data/herringSamps_abrev.csv")
 
 ## Before we get started
 - Have you installed packages knitr, rmarkdown, flexdashboard, and all previous ones?
-- Could you click on File -> New -> R Markdown?
+- Could you click on File -> New -> R Markdown -> from template?
+    - Did you see an option for "Flex dashboard"
 - Did you create a new RStudio project and associated folder?
-- Do you have the abiotic data set in this folder (or data folder)?
+- Do you have the abiotic data set in this folder (or data sub-folder)?
 - Anything we need to review (R, RStudio, readr)???
 
 ## What this workshop is about
@@ -46,7 +47,7 @@ herr <- read_csv("data/herringSamps_abrev.csv")
 - This workshop is not about:
     - dynamic documents
     - reproducible research
-    - all aspects of markdown and other similar languages
+    - a markdown tutorial
 - A workshop on making Rmarkdown documents is available if interested
 
 
@@ -64,6 +65,7 @@ herr <- read_csv("data/herringSamps_abrev.csv")
     - aesthetics
     - geom
 - plotly - interactive plots
+    - we are using it to easily make ggplot objects interactive
 
 ## Objectives
 - Basic: produce a simple dashboard with interactive graphs
@@ -93,8 +95,8 @@ Begin an R markdown file (File -> New -> R Markdown)
 
 
 ## RMarkdown Basics: columns and headers
-- Columns are created with "Column" and "---------"
 - Can organize layout by rows (not covered)
+- Columns are created with "Column" and "---------"
 - Can specify column width {data = width = 650}
 - Headers are specified with "###" and a "title"
 
@@ -132,6 +134,7 @@ Begin an R markdown file (File -> New -> R Markdown)
     - loading packages (e.g. library (ggplot2))
     - reading/manipulating data 
 - Note: the "{r setup}" - you can name your chunks but this is optional
+- Note: "include = FALSE" means output will not be displayed
 
 
 ## Rmarkdown basics: the setup chunk
