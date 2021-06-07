@@ -166,8 +166,13 @@ Begin an R markdown file (File -> New -> R Markdown)
 - check to see the figures appear where you want them to and are interactive
 
 ## Intermediate RMarkdown 
-- Add pages
-- more complicated layouts
+- Step 1
+    - Add pages
+    - change the layout
+- Step 2
+    - add tabsets
+    - drop down menus
+
 
 ## RMarkdown Intermediate: pages
 - In a markdown document, hashtags create headers (more hashtags = smaller header)
@@ -177,51 +182,25 @@ Begin an R markdown file (File -> New -> R Markdown)
 - See
 https://rmarkdown.rstudio.com/flexdashboard/layouts.html
 
-
-## RMarkdown intermediate: The dashboard layout
-Hashtags - they're not just for Twitter
-<style> 
-  #slideID > p { 
-    margin-top: -100px; 
-  } 
-</style>
-<img src="figures/6_Rstudio_Dashboard.png" width="95%" />
-
-
-## RMarkdown Intermediate: tabsets
-SHOW TABSETS
+## RMarkdown Intermediate: layout, tabset, drop downs
+- columns 
+    - add or delete columns
+    - nest figures within columns
+    - hint 2-3 columns and 2-3 rows are about max.
+- tabset 
+    - Column {.tabset}
+- dropdown menu
+    - Column {data-navmenu="The Page"}
 
 ## RMarkdown intermediate exercises
-DO ALL THE ABOVE
-Page
-Tabset
-Change layout
+- Copy the first exercise to a new file (save it) and modify it as follows
+- We want 4 figures for this exercize so either 
+    - create a new figure
+    - copy the code from an existing figure
+- Add a page and add the fourth graph
+- On one page, tabset the figures
+- On the other page, create a dropdown menu 
 
-Copy the first exercise to a new file (save it) and produce the following document
-
-## Advanced RMarkdown
-Drop downs????
-
-## Advanced exercises
-- Copy the second exercise to a new file (save it) and produce the following document
-- Hint: the summary is the mean and SD of depth by NAFO division - use the tidyverse
-
-
-- .....then update it  to 2010 :)
-  
-## Next steps in RMarkdown {.smaller}
- - YAML headers
- - hooks
- - inserting graphics
- - Presentations (ioslides and RPres)
- - Adding bibliographies
- - templates
- - insert equations
- - Notebooks
- - packrat (so package updates don't mess things up)
- - Plotly
- - Ctrl-Shift-k
- - package editR
 
 ## Help {.smaller}
 Books  
