@@ -39,8 +39,9 @@ herr <- read_csv("data/herringSamps_abrev.csv")
 - Could you click on File -> New -> R Markdown -> from template?
     - Did you see an option for "Flex dashboard"
 - Did you create a new RStudio project and associated folder?
-- Do you have the abiotic data set in this folder (or data sub-folder)?
+- Do you have the abiotic/herring/yourData data set in this folder (or data sub-folder)?
 - Anything we need to review (R, RStudio, readr)???
+
 
 ## What this workshop is about
 - Making interactive dashboards, i.e. putting your ggplotly objects into a dashboard, i.e. a single file interactive html file
@@ -60,6 +61,7 @@ herr <- read_csv("data/herringSamps_abrev.csv")
     - make documents, presentations, or dashboards (posters)
     - output as html, pdf, Word/PowerPoint, etc
 
+
 ## Review ggplot2 and plotly
 - grammar of graphics
     - data
@@ -68,15 +70,16 @@ herr <- read_csv("data/herringSamps_abrev.csv")
 - plotly - interactive plots
     - we are using it to easily make ggplot objects interactive
 
+
 ## Objectives
 - Basic: produce a simple dashboard with interactive graphs
 - Intermediate: basic + create more complicated layouts
     - add pages
     - tabsets
-- Advanced: ??????
-
-
+    - dropdown menus
+- Advanced - your data
 - Questions before we start??
+
 
 ## RMarkdown Basics {.smaller}
 Begin an R markdown file (File -> New -> R Markdown)
@@ -98,7 +101,8 @@ Begin an R markdown file (File -> New -> R Markdown)
 ## RMarkdown Basics: columns and headers
 - Can organize layout by rows (not covered)
 - Columns are created with "Column" and "---------"
-- Can specify column width {data = width = 650}
+- Swiggly brackets {} can be used to control the output
+    - e.g. can specify column width with {data = width = 650}
 - Headers are specified with "###" and a "title"
 
 
@@ -134,8 +138,9 @@ Begin an R markdown file (File -> New -> R Markdown)
 - A chunk that doesn't produce any output but useful for:
     - loading packages (e.g. library (ggplot2))
     - reading/manipulating data 
-- Note: the "{r setup}" - you can name your chunks but this is optional
-- Note: "include = FALSE" means output will not be displayed
+- Note: Lots of options are available to control output within the {}
+    - E.g., the "{r setup}" - you can name your chunks but this is optional
+    - E.g.,  "include = FALSE" means output will not be displayed
 
 
 ## Rmarkdown basics: the setup chunk
@@ -146,32 +151,38 @@ Begin an R markdown file (File -> New -> R Markdown)
 </style>
 <img src="figures/6_Rstudio_Dashboard.png" width="95%" />
 
+
 ## Rmarkdown basics: the Knit button
 - click on "Knit" button to run code and specify output
 
+
 ## Basic Exercise I
+- Open RStudio
 - begin an R markdown file (File -> New -> R Markdown)
 - Choose "From template", make sure "Flexdashboard" is selected, hit OK
 - File -> Save As -> name the file
 - "knit" the file -> choose "Knit to html"
 
+- Now, add a simple plot
+
 ## Basic Exercise II
 - Now it's your turn (hint: recycle your code!!!!)
 - Setup chunk
-    - load the packages readr, knitr, and rmarkdown
+    - load the packages readr, ggplot2, plotly, and knitr
     - read in the abiotic data file
-- copy the code for three ggplotly objects into the r chunks
+- Copy the code for three ggplot(ly) objects into the r chunks
 - "knit" the file -> choose "Knit to html"
-- open in browser
-- check to see the figures appear where you want them to and are interactive
+- Open in browser
+- Check to see the figures appear where you want them to and are interactive
+
 
 ## Intermediate RMarkdown 
 - Step 1
-    - Add pages
+    - add pages
     - change the layout
 - Step 2
     - add tabsets
-    - drop down menus
+    - dropdown menus
 
 
 ## RMarkdown Intermediate: pages
@@ -182,25 +193,30 @@ Begin an R markdown file (File -> New -> R Markdown)
 - See
 https://rmarkdown.rstudio.com/flexdashboard/layouts.html
 
+
 ## RMarkdown Intermediate: layout, tabset, drop downs
-- columns 
+- Columns 
     - add or delete columns
     - nest figures within columns
     - hint 2-3 columns and 2-3 rows are about max.
-- tabset 
+- Tabset 
     - Column {.tabset}
-- dropdown menu
+- Dropdown menu
     - Column {data-navmenu="The Page"}
+
 
 ## RMarkdown intermediate exercises
 - Copy the first exercise to a new file (save it) and modify it as follows
-- We want 4 figures for this exercize so either 
+- We want 4 figures for this exercise so either 
     - create a new figure
-    - copy the code from an existing figure
-- Add a page and add the fourth graph
+    - copy the code from an existing figure (duplicate)
+- Add a page and add the fourth graph (2 figures per page)
+- Knit this to make sure it works
 - On one page, tabset the figures
 - On the other page, create a dropdown menu 
 
+## Advanced exercises
+Repeat intermeidate exercises but with your data - we're here to help
 
 ## Help {.smaller}
 Books  
@@ -224,6 +240,3 @@ YAML
 http://rmarkdown.rstudio.com/html_document_format.html
 http://rmarkdown.rstudio.com/pdf_document_format.html
 http://rmarkdown.rstudio.com/word_document_format.html
-
-
-
