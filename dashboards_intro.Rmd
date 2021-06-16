@@ -50,7 +50,7 @@ herr <- read_csv("data/herringSamps_abrev.csv")
     - dynamic documents
     - reproducible research
     - a markdown tutorial
-- A workshop on making Rmarkdown documents is available if interested
+- A workshop on the above is available if interested
 
 
 ## Review markdown
@@ -63,12 +63,13 @@ herr <- read_csv("data/herringSamps_abrev.csv")
 
 
 ## Review ggplot2 and plotly
-- grammar of graphics
+- Grammar of Graphics (gg)
     - data
     - aesthetics
     - geom
-- plotly - interactive plots
+- Plotly - interactive plots
     - we are using it to easily make ggplot objects interactive
+- Anything to review here?
 
 
 ## Objectives
@@ -205,18 +206,22 @@ https://rmarkdown.rstudio.com/flexdashboard/layouts.html
     - Column {data-navmenu="The Page"}
 
 
-## RMarkdown intermediate exercises
+## Intermediate Exercises I
 - Copy the first exercise to a new file (save it) and modify it as follows
 - We want 4 figures for this exercise so either 
     - create a new figure
     - copy the code from an existing figure (duplicate)
 - Add a page and add the fourth graph (2 figures per page)
 - Knit this to make sure it works
+
+## Intermediate Exercises II
+- Using the previous Int Excercise:
 - On one page, tabset the figures
 - On the other page, create a dropdown menu 
+- Knit the file
 
 ## Advanced exercises
-Repeat intermeidate exercises but with your data - we're here to help
+Repeat intermediate exercises but with your data - we're here to help
 
 ## Help {.smaller}
 Books  
