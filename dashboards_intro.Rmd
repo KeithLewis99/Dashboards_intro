@@ -6,6 +6,7 @@ output:
   ioslides_presentation:
     incremental: yes
     widescreen: yes
+    logo: images/logo_flexdashboard.png
   beamer_presentation:
     incremental: yes
 ---
