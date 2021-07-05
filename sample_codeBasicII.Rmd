@@ -1,5 +1,5 @@
 ---
-title: "Sample"
+title: "Sample w/ graph"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -25,12 +25,12 @@ Column {data-width=350}
 ### Chart B
 
 ```{r}
-
+plot(cars$speed, cars$dist, col = "red")
 ```
 
 ### Chart C
 
 ```{r}
-
+plot(cars$dist, cars$speed, pch = 16)
 ```
 
