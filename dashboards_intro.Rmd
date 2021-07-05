@@ -3,12 +3,12 @@ title: "A Brief Introduction to Dashboards"
 author: "Keith Lewis"
 date: "NAFC | Fisheries and Oceans Canada | July 6, 2021"
 output:
+  beamer_presentation:
+    incremental: yes
   ioslides_presentation:
     incremental: yes
     widescreen: yes
     logo: images/logo_flexdashboard.png
-  beamer_presentation:
-    incremental: yes
 ---
 
 ```{r setup, echo=FALSE, results="hide", message=FALSE, warning=FALSE}
