@@ -1,5 +1,5 @@
 ---
-title: "Sample"
+title: "Sample Tabset"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -18,14 +18,14 @@ Column {.tabset}
 ### Chart A
 
 ```{r}
-
+plot(cars$speed, cars$dist)
 ```
 
 
 ### Chart B
 
 ```{r}
-
+plot(cars$speed, cars$dist, col = "red")
 ```
 
 # Page 2
@@ -36,12 +36,12 @@ Column {.tabset}
 ### Chart C
 
 ```{r}
-
+plot(cars$dist, cars$speed, pch = 16)
 ```
 
 
 ### Chart D
 
 ```{r}
-
+plot(cars$dist, cars$speed, pch = 24)
 ```
