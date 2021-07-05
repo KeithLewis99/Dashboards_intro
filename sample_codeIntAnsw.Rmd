@@ -1,0 +1,46 @@
+---
+title: "Intermediate Exercises: Answers"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+```
+
+# Page 1 {data-navmenu="Page 1"}
+
+### Chart A
+
+```{r}
+plot(cars$speed, cars$dist)
+```
+
+
+# Page 2 {data-navmenu="Page 1"}
+
+### Chart B
+
+```{r}
+plot(cars$speed, cars$dist, col = "red")
+```
+
+# Page 3 
+
+Column {.tabset}
+-----------------------------------------------------------------------
+
+### Chart C
+
+```{r}
+plot(cars$dist, cars$speed, pch = 16)
+```
+
+
+### Chart D
+
+```{r}
+plot(cars$dist, cars$speed, pch = 24)
+```
