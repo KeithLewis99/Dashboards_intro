@@ -1,7 +1,7 @@
 ---
 title: "A Brief Introduction to Dashboards"
 author: "Keith Lewis"
-date: "NAFC | Fisheries and Oceans Canada | October 12, 2017"
+date: "NAFC | Fisheries and Oceans Canada | July 6, 2021"
 output:
   ioslides_presentation:
     incremental: yes
@@ -73,17 +73,17 @@ herr <- read_csv("data/herringSamps_abrev.csv")
 
 
 ## Objectives
-- Basic: produce a simple dashboard with interactive graphs
+- Basic: produce a simple dashboard
 - Intermediate: basic + create more complicated layouts
     - add pages
     - tabsets
     - dropdown menus
-- Advanced - your data
+- Advanced - interactive dashboards + your own data
 - Questions before we start??
 
 
 ## RMarkdown Basics {.smaller}
-Begin an R markdown file (File -> New -> R Markdown)
+Begin an Rmarkdown file (File -> New -> R Markdown)
 <style> 
   #slideID > p { 
     margin-top: -100px; 
@@ -134,6 +134,14 @@ Begin an R markdown file (File -> New -> R Markdown)
 </style>
 <img src="figures/6_Rstudio_Dashboard_chunks.png" width="95%" />
 
+## Rmarkdown basics: the setup chunk
+<style> 
+  #slideID > p { 
+    margin-top: -100px; 
+  } 
+</style>
+<img src="figures/6_Rstudio_Dashboard.png" width="95%" />
+
 
 ## Rmarkdown basics: the setup chunk
 - A chunk that doesn't produce any output but useful for:
@@ -142,15 +150,6 @@ Begin an R markdown file (File -> New -> R Markdown)
 - Note: Lots of options are available to control output within the {}
     - E.g., the "{r setup}" - you can name your chunks but this is optional
     - E.g.,  "include = FALSE" means output will not be displayed
-
-
-## Rmarkdown basics: the setup chunk
-<style> 
-  #slideID > p { 
-    margin-top: -100px; 
-  } 
-</style>
-<img src="figures/6_Rstudio_Dashboard.png" width="95%" />
 
 
 ## Rmarkdown basics: the Knit button
@@ -164,14 +163,14 @@ Begin an R markdown file (File -> New -> R Markdown)
 - File -> Save As -> name the file
 - "knit" the file -> choose "Knit to html"
 
-- Now, add a simple plot
+- Now, add some cars plots and "knit" again
 
 ## Basic Exercise II
 - Now it's your turn (hint: recycle your code!!!!)
-- Setup chunk
+- Create a new dashboard file and modify the setup chunk
     - load the packages readr, ggplot2, plotly, and knitr
     - read in the abiotic data file
-- Copy the code for three ggplot(ly) objects into the r chunks
+- Copy the code for three plots (ggplotly or cars) into the r chunks
 - "knit" the file -> choose "Knit to html"
 - Open in browser
 - Check to see the figures appear where you want them to and are interactive
@@ -180,7 +179,7 @@ Begin an R markdown file (File -> New -> R Markdown)
 ## Intermediate RMarkdown 
 - Step 1
     - add pages
-    - change the layout
+    - change the layout (columns to rows)
 - Step 2
     - add tabsets
     - dropdown menus
@@ -191,37 +190,44 @@ Begin an R markdown file (File -> New -> R Markdown)
 - In a dashboard, hashtags create:
     - pages (#)
     - headers on the page (###)
-- See
-https://rmarkdown.rstudio.com/flexdashboard/layouts.html
-
-
-## RMarkdown Intermediate: layout, tabset, drop downs
 - Columns 
     - add or delete columns
     - nest figures within columns
     - hint 2-3 columns and 2-3 rows are about max.
+- See https://pkgs.rstudio.com/flexdashboard/articles/layouts.html
+
+
+## RMarkdown Intermediate: layout, tabset, drop downs
 - Tabset 
     - Column {.tabset}
+    - Delete "extra" columns
 - Dropdown menu
     - Column {data-navmenu="The Page"}
 
 
 ## Intermediate Exercises I
 - Copy the first exercise to a new file (save it) and modify it as follows
-- We want 4 figures for this exercise so either 
-    - create a new figure
-    - copy the code from an existing figure (duplicate)
+- We want 4 cars figures for this exercise
 - Add a page and add the fourth graph (2 figures per page)
 - Knit this to make sure it works
 
 ## Intermediate Exercises II
-- Using the previous Int Excercise:
+- Using the previous Int Exercise:
 - On one page, tabset the figures
-- On the other page, create a dropdown menu 
+- On the other page, create a dropdown menu (needs two pages)
 - Knit the file
+- Hint: do this in steps (tabset first, dropdown second)
 
 ## Advanced exercises
 Repeat intermediate exercises but with your data - we're here to help
+
+
+## Thoughts on workflow
+- make sure the file is read the way it should be (data types)
+- make the static graph
+- make the interactive graph
+- put it in dashboard
+- as dashboards get bigger, it may be helpful to try the interactive plots in a "test" dashboard first as it will compile faster
 
 ## Help {.smaller}
 Books  
