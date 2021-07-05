@@ -1,5 +1,5 @@
 ---
-title: "Sample"
+title: "Sample Pages "
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -18,14 +18,17 @@ Column
 ### Chart A
 
 ```{r}
-
+plot(cars$speed, cars$dist)
 ```
+
+Column
+-----------------------------------------------------------------------
 
 
 ### Chart B
 
 ```{r}
-
+plot(cars$speed, cars$dist, col = "red")
 ```
 
 # Page 2
@@ -36,12 +39,14 @@ Column
 ### Chart C
 
 ```{r}
-
+plot(cars$dist, cars$speed, pch = 16)
 ```
 
+Column
+-----------------------------------------------------------------------
 
 ### Chart D
 
 ```{r}
-
+plot(cars$dist, cars$speed, pch = 24)
 ```
